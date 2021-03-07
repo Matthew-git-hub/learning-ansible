@@ -4,6 +4,7 @@
 - name: updates Stuff
   hosts: pi
   remote_user: matthew
+  become: yes
 
   tasks: 
   - name: ensure python is up to date
@@ -18,4 +19,3 @@
     apt: 
       name: groovy
       state: absent
-    become: yes   
